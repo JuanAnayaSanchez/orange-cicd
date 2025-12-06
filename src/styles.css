@@ -20,7 +20,7 @@ html {
 a,
 button,
 input[type="button"],
-input[type="submit"], 
+input[type="submit"],
 input[type="reset"],
 select,
 .cursor-pointer,
@@ -29,7 +29,7 @@ select,
 [tabindex]:not([tabindex="-1"]),
 [ng-reflect-router-link],
 .p-menuitem-link,
-.p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+.p-menubar-root-list>.p-menuitem>.p-menuitem-link {
   cursor: url('/assets/img/cursor-pointer-select.cur') 8 8, pointer !important;
 }
 
@@ -117,28 +117,36 @@ body.splash-active {
 
 .custombg {
   /* From https://css.glass */
-background: rgba(255, 255, 255, 0.68);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 /* ===== ESTILOS RESPONSIVOS PARA MÓVILES ===== */
 @media (max-width: 960px) {
+  body {
+    background-color: #312c1e;
+  }
+
+  #podcastsTitle {
+    padding-top: 23vw !important;
+  }
+
   .p-menubar {
     display: block !important;
   }
 
-  .p-menubar-item-link{
+  .p-menubar-item-link {
     display: flex !important;
     justify-content: center !important;
   }
 
-  .p-menubar-item-label{
+  .p-menubar-item-label {
     font-size: 4vw !important;
   }
 
-  .p-menubar-root-list{
+  .p-menubar-root-list {
     width: 7rem !important;
     left: -28px !important;
   }
