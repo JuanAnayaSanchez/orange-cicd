@@ -11,4 +11,16 @@ import { ScrollingComponent } from '../../shared/scrolling/scrolling.component';
   styleUrl: './universo.component.css'
 })
 export class UniversoComponent {
+  isMobile: boolean = false;
+  shouldAutoplay: boolean = true;
+
+  constructor() {
+    this.checkIfMobile();
+  }
+
+  private checkIfMobile(): void {
+    // Detectar si es mobile basado en el ancho de la ventana y user agent
+    this.isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    this.shouldAutoplay = !this.isMobile;
+  }
 }

@@ -27,9 +27,12 @@
         <div class="atletas-2 flex justify-end">
             <div
                 class="video-container h-[33vw] max-mobile:h-[128vw] w-[80%] max-mobile:w-[100%] rounded-[0.5rem] overflow-hidden">
-                <video src="/assets/videos/Atletas.webm" autoplay muted loop playsinline webkit-playsinline
-                    disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback"
+                <!-- Video para desktop -->
+                <video *ngIf="!isMobile" src="/assets/videos/Atletas.webm" autoplay muted loop playsinline
                     class="h-full w-full object-cover"></video>
+                <!-- Imagen para mobile -->
+                <img *ngIf="isMobile" src="/assets/img/universo-mobile/atletas-mobile.png" alt="Atletas"
+                    class="h-full w-full object-cover">
             </div>
         </div>
     </div>
@@ -58,9 +61,12 @@
         <div class="atletas-2 flex justify-start">
             <div
                 class="video-container h-[33vw] max-mobile:h-[128vw] w-[80%] max-mobile:w-[100%] rounded-[0.5rem] overflow-hidden">
-                <video src="/assets/videos/Marcas.webm" autoplay muted loop playsinline webkit-playsinline
-                    disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback"
+                <!-- Video para desktop -->
+                <video *ngIf="!isMobile" src="/assets/videos/Marcas.webm" autoplay muted loop playsinline
                     class="h-full w-full object-cover"></video>
+                <!-- Imagen para mobile -->
+                <img *ngIf="isMobile" src="/assets/img/universo-mobile/marcas-mobile.png" alt="Marcas"
+                    class="h-full w-full object-cover">
             </div>
         </div>
     </div>
@@ -89,9 +95,12 @@
         <div class="atletas-2 flex justify-end">
             <div
                 class="video-container h-[33vw] max-mobile:h-[128vw] w-[80%] max-mobile:w-[100%] rounded-[0.5rem] overflow-hidden">
-                <video src="/assets/videos/Clubes.webm" autoplay muted loop playsinline webkit-playsinline
-                    disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback"
+                <!-- Video para desktop -->
+                <video *ngIf="!isMobile" src="/assets/videos/Clubes.webm" autoplay muted loop playsinline
                     class="h-full w-full object-cover"></video>
+                <!-- Imagen para mobile -->
+                <img *ngIf="isMobile" src="/assets/img/universo-mobile/clubes-mobile.png" alt="Clubes Deportivos"
+                    class="h-full w-full object-cover">
             </div>
         </div>
     </div>
