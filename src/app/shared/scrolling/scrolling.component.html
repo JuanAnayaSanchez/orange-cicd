@@ -1,0 +1,10 @@
+<!-- Scrolling -->
+<div class="fixed bottom-[3.5vw] right-[1vw]">
+    <div *ngIf="isVisible"
+        @fadeInOut
+        class="w-[3vw] h-[3vw] flex items-center justify-center bg-[#1c1a17] rounded-full min-w-[40px] min-h-[40px] max-w-[70px] max-h-[70px]">
+        <button (click)="scrollToTop()" class="cursor-pointer">
+            <img src="/assets/img/arrow-logo.png" alt="Scrolling-logo" class="pointer">
+        </button>
+    </div>
+</div>

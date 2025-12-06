@@ -1,0 +1,145 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-mobile: 639px;
+}
+
+/* Custom Cursors */
+:root {
+  /*--orange-primary: #f2ad36;*/
+  --orange-primary: #fe6402;
+}
+
+/* Cursor por defecto */
+html {
+  cursor: url('/assets/img/cursor-pointer.cur') 8 8, auto;
+}
+
+/* Solo elementos que realmente necesitan cursor pointer */
+a,
+button,
+input[type="button"],
+input[type="submit"], 
+input[type="reset"],
+select,
+.cursor-pointer,
+[role="button"],
+[onclick],
+[tabindex]:not([tabindex="-1"]),
+[ng-reflect-router-link],
+.p-menuitem-link,
+.p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+  cursor: url('/assets/img/cursor-pointer-select.cur') 8 8, pointer !important;
+}
+
+/* Para capturar elementos con style inline */
+[style*="cursor: pointer"],
+[style*="cursor:pointer"] {
+  cursor: url('/assets/img/cursor-pointer-select.cur') 8 8, pointer !important;
+}
+
+
+/* Fonts */
+@font-face {
+  font-family: 'montserrat-light';
+  src: url('assets/fonts/Montserrat-Light.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'posterama-light';
+  src: url('assets/fonts/posterama-light.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'posterama-semibold';
+  src: url('assets/fonts/posterama-semibold.woff2') format('woff2');
+  font-weight: 400;
+  font-style: semi-bold;
+}
+
+@font-face {
+  font-family: 'posterama-regular';
+  src: url('assets/fonts/posterama-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: regular;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #FDD366;
+  opacity: 0.9;
+}
+
+/* Menu */
+
+.p-menubar-item-label {
+  color: var(--orange-primary) !important;
+  font-family: 'posterama-semibold', Helvetica, sans-serif;
+  font-size: 0.7vw;
+}
+
+.p-menubar {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.959) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(8.5px) !important;
+  -webkit-backdrop-filter: blur(8.5px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Mantén tus estilos existentes y agrega esto: */
+
+/* Prevenir scroll durante splash */
+body.splash-active {
+  overflow: hidden;
+}
+
+/* Hover rojo para el menubar */
+.p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-link:hover {
+  background-color: #dc3545 !important;
+  color: #ffffff !important;
+  border-radius: 8px;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+  transition: all 0.3s ease;
+}
+
+.custombg {
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.68);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+}
+
+/* ===== ESTILOS RESPONSIVOS PARA MÓVILES ===== */
+@media (max-width: 960px) {
+  .p-menubar {
+    display: block !important;
+  }
+
+  .p-menubar-item-link{
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .p-menubar-item-label{
+    font-size: 4vw !important;
+  }
+
+  .p-menubar-root-list{
+    width: 7rem !important;
+    left: -28px !important;
+  }
+}

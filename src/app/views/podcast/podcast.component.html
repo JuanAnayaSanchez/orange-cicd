@@ -1,0 +1,29 @@
+<app-main-menu></app-main-menu>
+<div class="min-h-[100vh] bg-black pr-[15%] pl-[15%]">
+    <h1 class="text-[3.5vw] pt-[6vw] pb-[3vw] font-[posterama-semibold] text-center text-[var(--orange-primary)]">
+        PODCASTS
+    </h1>
+    <div class="flex items-center justify-center pb-[3vw]">
+        <div class="w-[2px] h-[10px] bg-[var(--orange-primary)]"></div>
+        <hr size="1px" style="color: var(--orange-primary);" class="w-[100%]" />
+        <div class="w-[2px] h-[10px] bg-[var(--orange-primary)]"></div>
+    </div>
+
+    <!-- Add your podcast content here -->
+    <div class="spotify-container bg-black">
+        <object type="text/html" 
+                [data]="spotifyUrl" 
+                style="width: 100%; height: 500px; border-radius: 12px;"
+                allowfullscreen 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </object>
+    </div>
+
+    <div class="flex items-center justify-center pt-[3vw] pb-[3vw]">
+        <div class="w-[2px] h-[10px] bg-[var(--orange-primary)]"></div>
+        <hr size="1px" style="color: var(--orange-primary);" class="w-[100%]" />
+        <div class="w-[2px] h-[10px] bg-[var(--orange-primary)]"></div>
+    </div>
+</div>
+<app-scrolling></app-scrolling>
+<app-footer></app-footer>

@@ -1,0 +1,52 @@
+.atletas-1 {
+    grid-area: atletas-1;
+}
+
+.atletas-2 {
+    grid-area: atletas-2;
+}
+
+.atletas-container {
+    display: grid;
+    grid-template-areas:
+        "atletas-1 atletas-2";
+    grid-template-columns: 60% 40%;
+    /* cada columna ocupa la mitad */
+}
+
+.atletas-container-reverse {
+    display: grid;
+    grid-template-areas:
+        "atletas-2 atletas-1";
+    grid-template-columns: 40% 60%;
+    /* cada columna ocupa la mitad */
+}
+
+
+.left-border-title {
+    border-left: 5px solid #fe6402;
+    /* grosor, estilo y color */
+    padding-left: 10px;
+}
+
+/* ===== ESTILOS RESPONSIVOS PARA MÓVILES ===== */
+@media (max-width: 960px) {
+    .atletas-container {
+        display: grid;
+        grid-template-areas:
+            "atletas-1"
+            "atletas-2";
+        grid-template-columns: 100%;
+        /* cada columna ocupa la totalidad */
+    }
+
+    .atletas-container-reverse {
+        display: grid;
+        grid-template-areas:
+            "atletas-1"
+            "atletas-2";
+        grid-template-columns: 100%;
+        /* cada columna ocupa la totalidad */
+    }
+
+}

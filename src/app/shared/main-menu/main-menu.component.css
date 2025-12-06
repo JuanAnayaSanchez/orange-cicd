@@ -1,0 +1,135 @@
+/* .menu-logo {
+    height: 1.3vw;
+} */
+
+.logo-container {
+    background: rgba(255, 255, 255, 0.959);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.logo-container-social {
+    background: rgba(255, 255, 255, 0.959);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+/* NUEVOS ESTILOS PARA SPLASH SCREEN */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* From https://css.glass */
+    background: white;
+    backdrop-filter: blur(8.5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.splash-screen.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.splash-screen.hidden {
+    display: none;
+}
+
+.splash-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: logoAppear 1s ease-out forwards;
+}
+
+.splash-logo {
+    width: 25vw;
+    height: auto;
+    max-width: 400px;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: logoAnimation 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes logoAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1) rotate(2deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes logoAppear {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Header normal - inicialmente oculto */
+.normal-header {
+    transition: opacity 0.3s ease-in;
+}
+
+.normal-header.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Efectos hover para los logos normales */
+.logo-container:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.logo-container-social:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .splash-logo {
+        width: 50vw;
+        max-width: 300px;
+    }
+
+    .menu-logo {
+        height: 3vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .splash-logo {
+        width: 70vw;
+        max-width: 250px;
+    }
+}
