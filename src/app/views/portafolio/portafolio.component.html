@@ -15,8 +15,12 @@
                 <div class="atletas-2 flex justify-end w-[40%] max-mobile:w-[100%] h-[100%]">
                     <div
                         class="video-container h-[] w-[100%] rounded-l-[0.5rem] max-mobile:rounded-tl-[0.5rem] max-mobile:rounded-tr-[0.5rem] max-mobile:rounded-br-[0rem] max-mobile:rounded-bl-[0rem] overflow-hidden">
-                        <video src="/assets/videos/habilidad-mental.webm" autoplay muted loop
+                        <!-- Video para desktop -->
+                        <video *ngIf="!isMobile" src="/assets/videos/habilidad-mental.webm" autoplay muted loop playsinline
                             class="h-full w-full object-cover"></video>
+                        <!-- Imagen para mobile -->
+                        <img *ngIf="isMobile" src="/assets/img/portafolio-mobile/portafolio-mobile.png" alt="Habilidades"
+                            class="h-full w-full object-cover">
                     </div>
                 </div>
                 <div class="w-[60%] max-mobile:w-[100%] h-[100%] ml-[2vw] mr-[2vw]">

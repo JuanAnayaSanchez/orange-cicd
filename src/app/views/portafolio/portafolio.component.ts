@@ -29,6 +29,16 @@ export class PortafolioComponent {
   showGallery = false;
   currentGalleryIndex = 0;
   selectedGalleryImage: string = '';
+  isMobile: boolean = false;
+
+  constructor() {
+    this.checkIfMobile();
+  }
+
+  private checkIfMobile(): void {
+    // Detectar si es mobile basado en el ancho de la ventana y user agent
+    this.isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
 
   projects: Project[] = [
     {
